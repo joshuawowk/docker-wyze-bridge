@@ -35,7 +35,7 @@ services:
             - WB_USERNAME=${WB_USERNAME}
             - WB_PASSWORD=${WB_PASSWORD}
             - WB_RTSP_URL=rtsp://localhost:8004/
-            # - ROTATE_DOOR=True
+            - ROTATE_DOOR=True
             - H264_ENC=h264_nvenc
             - FFMPEG_CMD=ffmpeg -loglevel verbose -f h264 -c:v h264_cuvid -i - -c:v h264_nvenc -rtsp_transport tcp -f rtsp rtsp://0.0.0.0:8554/{cam_name}
             # - NVIDIA_VISIBLE_DEVICES=all
