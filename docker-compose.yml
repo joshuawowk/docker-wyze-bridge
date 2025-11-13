@@ -34,6 +34,8 @@ services:
             - WB_AUTH=True # Set to false to disable web and stream auth.
             - WB_USERNAME=${WB_USERNAME}
             - WB_PASSWORD=${WB_PASSWORD}
+            - WB_RTSP_URL=rtsp://localhost:8004/
+
         networks:
             - npm_net
 networks:
