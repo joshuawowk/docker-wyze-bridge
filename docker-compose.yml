@@ -2,7 +2,7 @@ services:
     wyze-bridge:
         container_name: wyze-bridge
         restart: unless-stopped
-        image: idisposablegithub365/wyze-bridge:latest
+        image: idisposablegithub365/wyze-bridge:sha-b886424e7c0d9640abf720712fe6ef067db6bac6-hw
         network_mode: host
         ports:
             - 1935:1935/tcp # RTMP rtmp://localhost:1935/mystream?user=myuser&pass=mypass
