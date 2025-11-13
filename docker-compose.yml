@@ -3,7 +3,7 @@ services:
         container_name: wyze-bridge
         restart: unless-stopped
         image: idisposablegithub365/wyze-bridge:latest
-        # network_mode: host
+        network_mode: host
         ports:
             - 1935:1935/tcp # RTMP rtmp://localhost:1935/mystream?user=myuser&pass=mypass
             - 1936:1936/tcp # RTMP rtmps://localhost:1936/mystream?user=myuser&pass=mypass
@@ -36,8 +36,8 @@ services:
             - WB_PASSWORD=${WB_PASSWORD}
             - WB_RTSP_URL=rtsp://localhost:8004/
 
-        networks:
-            - npm_net
-networks:
-    npm_net:
-        external: true    
+        # networks:
+        #     - npm_net
+# networks:
+#     npm_net:
+#         external: true    
