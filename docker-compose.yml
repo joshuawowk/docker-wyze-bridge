@@ -46,8 +46,8 @@ services:
                 - driver: nvidia
                   count: all
                   capabilities: [gpu]
-        networks:
-            - npm_net
-networks:
-    npm_net:
-        external: true    
+#         networks:
+#             - npm_net
+# networks:
+#     npm_net:
+#         external: true    
