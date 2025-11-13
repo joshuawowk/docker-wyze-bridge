@@ -35,7 +35,10 @@ services:
             - WB_USERNAME=${WB_USERNAME}
             - WB_PASSWORD=${WB_PASSWORD}
             - WB_RTSP_URL=rtsp://localhost:8004/
-
+            - ROTATE_DOOR=True
+            - H264_ENC=h264_nvenc
+        devices:
+            - /dev:/dev
         # networks:
         #     - npm_net
 # networks:
