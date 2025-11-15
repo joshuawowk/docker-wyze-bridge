@@ -35,20 +35,21 @@ services:
             - WB_USERNAME=${WB_USERNAME}
             - WB_PASSWORD=${WB_PASSWORD}
             - WB_RTSP_URL=rtsp://localhost:8004/
-            - ROTATE_DOOR=True
-            - H264_ENC=h264_nvenc
+            # - ROTATE_DOOR=True
+            # - H264_ENC=h264_nvenc
             # - FFMPEG_CMD=ffmpeg -loglevel verbose -f h264 -c:v h264_cuvid -i - -c:v h264_nvenc -rtsp_transport tcp -f rtsp rtsp://0.0.0.0:8554/{cam_name}
-            - NVIDIA_VISIBLE_DEVICES=all
-            - NVIDIA_DRIVER_CAPABILITIES=compute,video,utility
+            # - NVIDIA_VISIBLE_DEVICES=all
+            # - NVIDIA_DRIVER_CAPABILITIES=compute,video,utility
+            - FILTER_NAMES=Front Deck, Side Door,
         # devices:
         #     - /dev:/dev
-        deploy:
-          resources:
-            reservations:
-              devices:
-                - driver: nvidia
-                  count: all
-                  capabilities: [gpu]
+        # deploy:
+        #   resources:
+        #     reservations:
+        #       devices:
+        #         - driver: nvidia
+        #           count: all
+        #           capabilities: [gpu]
 #         networks:
 #             - npm_net
 # networks:
