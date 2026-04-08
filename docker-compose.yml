@@ -3,6 +3,9 @@ services:
         container_name: wyze-bridge
         restart: unless-stopped
         image: idisposablegithub365/wyze-bridge:latest-hw
+        labels:
+          tsdproxy.container_port: "8080"
+          tsdproxy.enable: "true"   
         network_mode: host
         ports:
             - 1935:1935/tcp # RTMP rtmp://localhost:1935/mystream?user=myuser&pass=mypass
